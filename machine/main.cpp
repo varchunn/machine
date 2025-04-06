@@ -99,7 +99,6 @@ public:
     Car(Engine* e, Transmission* t, Manufacturer* m, Chassis* c, Interior* i)
         : engine(e), transmission(t), manufacturer(m), chassis(c), interior(i) {}
 
-    // Копіювання (Прототип)
     Prototype* clone() const override {
         return new Car(
             dynamic_cast<Engine*>(engine->clone()),
